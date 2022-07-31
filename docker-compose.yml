@@ -27,8 +27,8 @@ services:
       ENABLE_AUTOPAUSE: "TRUE"
       DEBUG_AUTOPAUSE: "FALSE"
       MAX_TICK_TIME: "-1"
-      AUTOPAUSE_TIMEOUT_INIT: "5"
-      AUTOPAUSE_TIMEOUT_EST: "10"
+      AUTOPAUSE_TIMEOUT_INIT: "180"
+      AUTOPAUSE_TIMEOUT_EST: "600"
       # Overrides props on server start
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
     volumes:
