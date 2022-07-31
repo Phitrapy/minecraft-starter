@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  mc:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      SERVER_NAME: "my minecraft server"
+      # Version
+      VERSION: "LATEST"
+      # Whitelist
+      #WHITELIST_FILE: "./mc/whitelist.json"
+      # Ops
+      #OPS_FILE: "./mc/ops.json"
+      # Difficulty
+      DIFFICULTY: "EASY"
+      # PVP
+      PVP: "FALSE"
+      # TECHNICAL CONFIGURATION
+      MAX_MEMORY: "1024M"
+      # Autopause feature (values in second)
+      MAX_TICK_TIME: "-1"
+      AUTOPAUSE_TIMEOUT_INIT: "600"
+      AUTOPAUSE_TIMEOUT_EST: "300"
+      # Overrides props on server start
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - ./data:/data
