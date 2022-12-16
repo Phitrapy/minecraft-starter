@@ -22,6 +22,7 @@ services:
       # PVP
       PVP: "FALSE"
       # TECHNICAL CONFIGURATION
+      INIT_MEMORY: "512M"
       MAX_MEMORY: "1024M"
       # Autopause feature (values in second)
       ENABLE_AUTOPAUSE: "TRUE"
